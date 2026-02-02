@@ -7,6 +7,8 @@ export default function Footer() {
         본 사이트는 계산 도구만 제공하며, 투자 조언을 제공하지 않습니다.
       </p>
       <nav className="footer-links" aria-label="법적 고지">
+        <Link href="/about">소개</Link>
+        <span className="footer-divider" aria-hidden="true">|</span>
         <Link href="/privacy">개인정보처리방침</Link>
         <span className="footer-divider" aria-hidden="true">|</span>
         <Link href="/terms">이용약관</Link>
