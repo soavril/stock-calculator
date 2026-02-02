@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import ExitPricePlanner from '@/components/ExitPricePlanner';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   title: '매도가 계산기 - 목표가에서 얼마를 벌 수 있을까?',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '매도가 계산기 - 목표가에서 얼마를 벌 수 있을까?',
     description:
-      '목표 매도가에서 예상 수익을 미리 계산해보세요. 현명한 매도 결정을 도와드립니다.',
+      '목표 매도가에서 예상 수익을 미리 계산해보세요. 객관적인 매도 계획을 세울 수 있습니다.',
     type: 'website',
     url: `${BASE_URL}/exit-price-planner`,
   },

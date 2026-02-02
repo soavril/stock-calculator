@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import LossRecoveryCalculator from '@/components/LossRecoveryCalculator';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   title: '손실 회복 계산기 - 본전까지 얼마나 올라야 할까?',

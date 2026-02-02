@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import AveragingCalculator from '@/components/AveragingCalculator';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   title: '물타기 계산기 - 추가 매수가 본전에 도움이 될까?',

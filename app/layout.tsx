@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -30,9 +30,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  other: {
-    'google-adsense-account': 'ca-pub-XXXXXXXXXXXXXXXX', // Replace with actual AdSense ID
   },
 };
 

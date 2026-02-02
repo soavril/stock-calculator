@@ -24,7 +24,7 @@ export default function AboutPage() {
           </p>
           <p>
             감정적인 투자 결정 대신, 숫자로 객관적인 상황을 파악하는 것이
-            현명한 투자의 첫걸음이라고 믿습니다.
+            좋은 투자의 첫걸음이라고 믿습니다.
           </p>
         </section>
 

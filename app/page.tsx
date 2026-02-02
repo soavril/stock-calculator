@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SharedLayout from '@/components/SharedLayout';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   title: '주식 계산기 - 수익률, 물타기, 손실 회복, 매도가 계산',
   description:
-    '무료 주식 계산기 모음. 수익률 계산기, 물타기 계산기, 손실 회복 계산기, 매도가 계산기를 한곳에서. 현명한 투자 결정을 도와드립니다.',
+    '무료 주식 계산기 모음. 수익률 계산기, 물타기 계산기, 손실 회복 계산기, 매도가 계산기를 한곳에서. 객관적인 투자 계산을 도와드립니다.',
   keywords: [
     '주식 계산기',
     '물타기 계산기',
@@ -98,7 +98,7 @@ export default function HomePage() {
         <h2>주식 계산기 사용법</h2>
         <p>
           주식 투자에서 감정적인 판단은 큰 손실로 이어질 수 있습니다.
-          이 계산기들을 활용하여 객관적인 숫자를 확인하고 현명한 결정을 내리세요.
+          이 계산기들을 활용하여 객관적인 숫자를 확인하세요.
         </p>
 
         <h3>1. 수익률부터 확인하세요</h3>

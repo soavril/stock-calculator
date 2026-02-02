@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import ReturnCalculator from '@/components/ReturnCalculator';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mooltagi.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mooltagi.com';
 
 export const metadata: Metadata = {
   title: '주식 수익률 계산기 - 손익 계산, 수익률 확인',
