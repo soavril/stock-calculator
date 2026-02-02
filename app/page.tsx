@@ -6,9 +6,9 @@ import AdSlot from '@/components/AdSlot';
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
 export const metadata: Metadata = {
-  title: '주식 계산기 - 물타기, 손실 회복, 매도가 계산',
+  title: '주식 계산기 - 수익률, 물타기, 손실 회복, 매도가 계산',
   description:
-    '무료 주식 계산기 모음. 물타기 계산기, 손실 회복 계산기, 매도가 계산기를 한곳에서. 현명한 투자 결정을 도와드립니다.',
+    '무료 주식 계산기 모음. 수익률 계산기, 물타기 계산기, 손실 회복 계산기, 매도가 계산기를 한곳에서. 현명한 투자 결정을 도와드립니다.',
   keywords: [
     '주식 계산기',
     '물타기 계산기',
@@ -31,6 +31,13 @@ export const metadata: Metadata = {
 };
 
 const calculators = [
+  {
+    href: '/return-calculator',
+    title: '수익률 계산기',
+    description: '매수가와 매도가만 입력하면 수익률을 바로 계산합니다.',
+    icon: '💰',
+    features: ['수익/손실 계산', '수익률 % 확인', '수수료 반영'],
+  },
   {
     href: '/averaging-calculator',
     title: '물타기/불타기 계산기',
@@ -101,19 +108,25 @@ export default function HomePage() {
           이 계산기들을 활용하여 객관적인 숫자를 확인하고 현명한 결정을 내리세요.
         </p>
 
-        <h3>1. 물타기 전에 확인하세요</h3>
+        <h3>1. 수익률부터 확인하세요</h3>
+        <p>
+          <Link href="/return-calculator">수익률 계산기</Link>로 매수가와 매도가에서의 예상 수익을 바로 확인하세요.
+          수수료까지 반영한 실수익을 계산할 수 있습니다.
+        </p>
+
+        <h3>2. 물타기 전에 확인하세요</h3>
         <p>
           물타기(평단 낮추기)를 하기 전에 <Link href="/averaging-calculator">물타기 계산기</Link>로
           새 평균가와 본전 난이도 변화를 확인하세요. 무조건적인 물타기는 손실을 키울 수 있습니다.
         </p>
 
-        <h3>2. 현실을 직시하세요</h3>
+        <h3>3. 현실을 직시하세요</h3>
         <p>
           <Link href="/loss-recovery-calculator">손실 회복 계산기</Link>로 본전까지 필요한 수익률을 확인하세요.
           30% 손실을 회복하려면 42.9% 상승이 필요합니다. 현실적인 기대를 갖는 것이 중요합니다.
         </p>
 
-        <h3>3. 매도 계획을 세우세요</h3>
+        <h3>4. 매도 계획을 세우세요</h3>
         <p>
           <Link href="/exit-price-planner">매도가 계획</Link>으로 목표 매도가에서의 예상 수익을 미리 계산하세요.
           매수보다 매도가 더 어렵습니다. 계획이 있으면 감정적 매매를 피할 수 있습니다.

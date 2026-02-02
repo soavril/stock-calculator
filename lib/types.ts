@@ -60,3 +60,13 @@ export interface PriceQuantityRow {
   price: number;
   quantity: number;
 }
+
+export interface ReturnResult {
+  profitLoss: number;        // 수익/손실 금액
+  returnPercent: number;     // 수익률 %
+  totalBuy: number;          // 총 매수금액
+  totalSell: number;         // 총 매도금액
+  feeAmount: number;         // 수수료 금액
+  netProfitLoss: number;     // 수수료 차감 후 순수익
+  netReturnPercent: number;  // 수수료 차감 후 수익률
+}

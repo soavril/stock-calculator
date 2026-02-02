@@ -1618,6 +1618,57 @@ html {
   scroll-padding-top: 16px;
 }
 
+/* Return Calculator Specific Styles */
+.result-hero-percent-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.result-hero-percent-large.profit {
+  color: var(--color-profit);
+}
+
+.result-hero-percent-large.loss {
+  color: var(--color-loss);
+}
+
+.result-hero-badge[data-direction="profit"] {
+  background: rgba(25, 135, 84, 0.1);
+  color: var(--color-profit);
+}
+
+.result-hero-badge[data-direction="loss"] {
+  background: rgba(220, 53, 69, 0.1);
+  color: var(--color-loss);
+}
+
+.result-hero-badge[data-direction="even"] {
+  background: var(--color-highlight-bg);
+  color: var(--color-text-secondary);
+}
+
+.result-hero-value.profit {
+  color: var(--color-profit);
+}
+
+.result-hero-value.loss {
+  color: var(--color-loss);
+}
+
+.fee-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.result-percent-inline {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .container {

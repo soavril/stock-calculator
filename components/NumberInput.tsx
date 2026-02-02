@@ -13,7 +13,7 @@ interface NumberInputProps {
   step?: string;
   /** Optional: track interactions for analytics */
   trackingId?: {
-    calculator: 'averaging' | 'loss-recovery' | 'exit-planner';
+    calculator: 'averaging' | 'loss-recovery' | 'exit-planner' | 'return';
     field: string;
   };
 }

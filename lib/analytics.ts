@@ -72,7 +72,7 @@ export function trackPageView(path: string): void {
  * Track calculator input change
  */
 export function trackCalculatorInteraction(
-  calculatorType: 'averaging' | 'loss-recovery' | 'exit-planner',
+  calculatorType: 'averaging' | 'loss-recovery' | 'exit-planner' | 'return',
   field: string
 ): void {
   trackEvent('calculator_interaction', {

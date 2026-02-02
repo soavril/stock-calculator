@@ -6,6 +6,7 @@ import type {
   PriceQuantityRow,
   AveragingResult,
   AveragingDirection,
+  ReturnResult,
 } from './types';
 
 /**
@@ -208,5 +209,40 @@ export function calculateTargetProfit(
     targetPrice,
     expectedProfit,
     returnPercent,
+  };
+}
+
+/**
+ * Return Calculator (수익률 계산기)
+ * Calculates profit/loss and return percentage from buy/sell prices
+ */
+export function calculateReturn(
+  buyPrice: number,
+  sellPrice: number,
+  quantity: number,
+  feePercent: number = 0
+): ReturnResult | null {
+  if (buyPrice <= 0 || sellPrice <= 0 || quantity <= 0) {
+    return null;
+  }
+
+  const totalBuy = buyPrice * quantity;
+  const totalSell = sellPrice * quantity;
+  const profitLoss = totalSell - totalBuy;
+  const returnPercent = (profitLoss / totalBuy) * 100;
+
+  // Fee calculation (applied to both buy and sell)
+  const feeAmount = (totalBuy + totalSell) * (feePercent / 100);
+  const netProfitLoss = profitLoss - feeAmount;
+  const netReturnPercent = (netProfitLoss / totalBuy) * 100;
+
+  return {
+    profitLoss,
+    returnPercent,
+    totalBuy,
+    totalSell,
+    feeAmount,
+    netProfitLoss,
+    netReturnPercent,
   };
 }

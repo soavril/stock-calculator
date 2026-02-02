@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
+  { href: '/return-calculator', label: '수익률 계산' },
   { href: '/averaging-calculator', label: '물타기 계산기' },
   { href: '/loss-recovery-calculator', label: '손실 회복' },
   { href: '/exit-price-planner', label: '매도 계획' },
