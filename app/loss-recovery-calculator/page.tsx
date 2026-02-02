@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import LossRecoveryCalculator from '@/components/LossRecoveryCalculator';
-import AdSlot from '@/components/AdSlot';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
@@ -53,13 +52,7 @@ export default function LossRecoveryCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SharedLayout>
-        {/* Ad: Top */}
-        <AdSlot slot="top" format="horizontal" />
-
         <LossRecoveryCalculator />
-
-        {/* Ad: Middle (after calculator) */}
-        <AdSlot slot="middle" format="native" />
 
         {/* SEO Content */}
         <section className="seo-content">
@@ -86,9 +79,6 @@ export default function LossRecoveryCalculatorPage() {
             필요 수익률 = (10,000 ÷ 7,000 - 1) × 100% = 42.9%
           </p>
         </section>
-
-        {/* Ad: Bottom (before footer) */}
-        <AdSlot slot="bottom" format="horizontal" />
       </SharedLayout>
     </>
   );

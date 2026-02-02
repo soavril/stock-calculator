@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import ExitPricePlanner from '@/components/ExitPricePlanner';
-import AdSlot from '@/components/AdSlot';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
@@ -53,13 +52,7 @@ export default function ExitPricePlannerPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SharedLayout>
-        {/* Ad: Top */}
-        <AdSlot slot="top" format="horizontal" />
-
         <ExitPricePlanner />
-
-        {/* Ad: Middle (after calculator) */}
-        <AdSlot slot="middle" format="native" />
 
         {/* SEO Content */}
         <section className="seo-content">
@@ -91,9 +84,6 @@ export default function ExitPricePlannerPage() {
             미국 주식은 22%의 양도소득세(250만원 공제)가 부과됩니다.
           </p>
         </section>
-
-        {/* Ad: Bottom (before footer) */}
-        <AdSlot slot="bottom" format="horizontal" />
       </SharedLayout>
     </>
   );

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SharedLayout from '@/components/SharedLayout';
-import AdSlot from '@/components/AdSlot';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
@@ -73,9 +72,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Ad: Top */}
-      <AdSlot slot="top" format="horizontal" />
-
       {/* Calculator Cards */}
       <section className="calculator-hub">
         {calculators.map((calc) => (
@@ -96,9 +92,6 @@ export default function HomePage() {
           </Link>
         ))}
       </section>
-
-      {/* Ad: Middle */}
-      <AdSlot slot="middle" format="native" />
 
       {/* SEO Content */}
       <section className="seo-content">
@@ -133,8 +126,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Ad: Bottom */}
-      <AdSlot slot="bottom" format="horizontal" />
     </SharedLayout>
   );
 }

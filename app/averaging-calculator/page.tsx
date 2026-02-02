@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 import AveragingCalculator from '@/components/AveragingCalculator';
-import AdSlot from '@/components/AdSlot';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
@@ -53,13 +52,7 @@ export default function AveragingCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SharedLayout>
-        {/* Ad: Top */}
-        <AdSlot slot="top" format="horizontal" />
-
         <AveragingCalculator />
-
-        {/* Ad: Middle (after calculator) */}
-        <AdSlot slot="middle" format="native" />
 
         {/* SEO Content */}
         <section className="seo-content">
@@ -80,9 +73,6 @@ export default function AveragingCalculatorPage() {
             이 계산기로 본전 난이도 변화를 확인하고 신중하게 결정하세요.
           </p>
         </section>
-
-        {/* Ad: Bottom (before footer) */}
-        <AdSlot slot="bottom" format="horizontal" />
       </SharedLayout>
     </>
   );
