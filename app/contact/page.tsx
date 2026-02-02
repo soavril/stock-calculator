@@ -36,7 +36,7 @@ export default function ContactPage() {
             아래 이메일로 연락해주세요.
           </p>
           <p className="contact-email">
-            <strong>이메일:</strong> contact@example.com
+            <strong>이메일:</strong> soavril@naver.com
           </p>
           <p className="contact-note">
             * 투자 조언, 종목 추천 등에 대한 문의에는 답변드리지 않습니다.
